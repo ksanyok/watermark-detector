@@ -1,0 +1,16 @@
+name: 'Text Watermark Detector by PromoPilot'
+description: 'Fail the build when text files contain zero-width characters, hidden Unicode tags, bidi controls or homoglyphs.'
+author: 'Alexandr Krikun'
+branding:
+  icon: 'eye'
+  color: 'purple'
+inputs:
+  args:
+    description: 'Arguments passed to the watermark-detector CLI, e.g. "article.txt"'
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Run watermark-detector
+      shell: bash
+      run: node "$GITHUB_ACTION_PATH/bin/cli.js" ${{ inputs.args }}
