@@ -18,7 +18,7 @@ Options:
   --fail            Exit with code 1 when anything is found (for CI / pre-commit)
   -h, --help        Show this help
 
-Online version (no install): https://promopilot.link/en/tools/watermark-detector.php
+Online version (no install): https://promopilot.link/en/tools/watermark-detector.php?utm_source=github&utm_medium=cli&utm_campaign=tools&utm_content=watermark-detector
 `;
 
 const args = process.argv.slice(2);
